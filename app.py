@@ -21,4 +21,4 @@ with st.form('entry form'):
 
 if hashed_pwd is not None:
     st.caption('Mot de passe encrypté')
-    st.success(hashed_pwd[0])
+    st.success(''.join(i if i!='$' else '\$' for i in hashed_pwd[0]))
